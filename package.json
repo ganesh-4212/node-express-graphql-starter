@@ -1,0 +1,51 @@
+{
+  "name": "express-graphql-starter",
+  "version": "0.0.1",
+  "description": "Boiler-plate code to get started with Nodejs, Mongoose, express and GraphQL",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon --exec babel-node src/server.js --inspect ./bin/www",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganesh-4212/node-express-graphql-starter.git"
+  },
+  "author": "Ganesh Poojary <ganesh4212@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ganesh-4212/node-express-graphql-starter/issues"
+  },
+  "homepage": "https://github.com/ganesh-4212/node-express-graphql-starter#readme",
+  "keywords": [
+    "nodejs",
+    "mongoose",
+    "mongodb",
+    "graphql",
+    "express",
+    "apollo-server",
+    "apollo-server-express"
+  ],
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1",
+    "lodash": "^4.17.11",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.22",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "nodemon": "^1.18.11"
+  }
+}
