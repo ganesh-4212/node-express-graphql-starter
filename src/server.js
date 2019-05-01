@@ -11,17 +11,21 @@ import routesConfig from './routes';
 const app = express();
 const port = process.env.PORT || 8080;
 mongoose.connect(config.dbURL, {
-  useNewUrlParser: true,
+  useNewUrlParser: true
 });
 
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({
-  extended: 'true',
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: 'true'
+  })
+);
 app.use(bodyParser.json());
-app.use(bodyParser.json({
-  type: 'application/vnd.api+json',
-}));
+app.use(
+  bodyParser.json({
+    type: 'application/vnd.api+json'
+  })
+);
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 routesConfig(app);

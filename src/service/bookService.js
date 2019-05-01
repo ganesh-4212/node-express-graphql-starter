@@ -19,7 +19,7 @@ export function getAllBooks() {
 export function findByIds(ids) {
   return Book.find({
     _id: {
-      $in: ids,
-    },
+      $in: ids
+    }
   }).exec();
 }

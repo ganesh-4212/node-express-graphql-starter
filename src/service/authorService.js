@@ -15,8 +15,8 @@ export function createAuthor(authorDoc) {
 export function findByIds(ids) {
   return Author.find({
     _id: {
-      $in: ids,
-    },
+      $in: ids
+    }
   }).exec();
 }
 

@@ -1,69 +1,67 @@
-import mongoose, {
-  Schema,
-} from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
 const Book = new Schema({
   isbn: {
     type: String,
     required: true,
     unique: true,
-    index: true,
+    index: true
   },
   title: {
     type: String,
-    required: true,
+    required: true
   },
   subTitle: {
     type: String,
-    required: true,
+    required: true
   },
   description: {
     type: String,
-    required: true,
+    required: true
   },
   genre: {
     type: String,
-    required: true,
+    required: true
   },
   publisher: {
     type: String,
-    required: true,
+    required: true
   },
   publishDate: {
     type: Date,
     required: true,
-    default: Date.now,
+    default: Date.now
   },
   price: {
     type: Number,
     required: true,
-    default: 0,
+    default: 0
   },
   edition: {
     type: Number,
     required: true,
-    default: 1,
+    default: 1
   },
   copiesSold: {
     type: Number,
     required: true,
-    default: 0,
+    default: 0
   },
   numberOfPages: {
     type: Number,
     required: true,
-    default: 0,
+    default: 0
   },
   url: {
-    type: String,
+    type: String
   },
   language: {
     type: String,
-    required: true,
+    required: true
   },
   authors: {
-    type: [Schema.Types.ObjectId],
-  },
+    type: [Schema.Types.ObjectId]
+  }
 });
 
 export default mongoose.model('Book', Book);
